@@ -1,11 +1,128 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Movie Site</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>🎥 Welcome to My Movie Showcase</h1>
-    <p>Coming soon: amazing trailers and cinematic vibes!</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Movie Streamer – Watch Trailers & Reviews</title>
+  <meta name="description" content="Stream the latest blockbusters and classics in HD. Watch trailers, read reviews, and more." />
+  <link rel="alternate" hreflang="en" href="https://swapcoder1312.github.io/Boldmovies/" />
+
+  <!-- Open Graph & Twitter Card -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Movie Streamer – Watch Trailers & Reviews" />
+  <meta property="og:description" content="Stream the latest blockbusters and classics in HD. Watch trailers, read reviews, and more." />
+  <meta property="og:url" content="https://swapcoder1312.github.io/Boldmovies/" />
+  <meta property="og:image" content="https://swapcoder1312.github.io/Boldmovies/cover.jpg" />
+  <meta property="og:video" content="https://swapcoder1312.github.io/Boldmovies/trailer.mp4" />
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:player" content="https://swapcoder1312.github.io/Boldmovies/trailer-embed.html" />
+
+  <!-- Primary Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Movie",
+    "name": "Sample Movie",
+    "image": "https://swapcoder1312.github.io/Boldmovies/thumb.jpg",
+    "datePublished": "2025-08-01",
+    "director": {
+      "@type": "Person",
+      "name": "Jane Doe"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "bestRating": "5",
+      "ratingCount": "230"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="navbar">
+    <div class="container">
+      <a class="brand" href="#">MovieStreamer</a>
+
+      <button
+        class="nav-toggle"
+        aria-controls="nav-menu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="nav-menu" class="nav-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#movies">Movies</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="https://swapcoder1312.github.io/Boldmovies/trailer.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay">
+        <h1>Experience the Magic of Movies</h1>
+        <p>Stream the latest blockbusters right now.</p>
+        <a href="#movies" class="btn btn-primary">Browse Movies</a>
+      </div>
+    </section>
+
+    <section id="movies" class="carousel-section">
+      <h2>Featured Movies</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <figure class="movie-card">
+              <img src="https://swapcoder1312.github.io/Boldmovies/movie1.jpg" alt="Movie 1 Poster" />
+              <figcaption>
+                <h3>Movie Title 1</h3>
+                <p>4.7/5 • Action, Adventure</p>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <figure class="movie-card">
+              <img src="https://swapcoder1312.github.io/Boldmovies/movie2.jpg" alt="Movie 2 Poster" />
+              <figcaption>
+                <h3>Movie Title 2</h3>
+                <p>4.9/5 • Drama, Mystery</p>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- Add more slides as needed -->
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 MovieStreamer. All rights reserved.</p>
+  </footer>
+
+  <!-- Swiper.js & Main Script (deferred) -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
 </html>
